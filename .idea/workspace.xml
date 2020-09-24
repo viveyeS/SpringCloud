@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab36ebbe-410e-4522-9268-82969f527d46" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/JAVA/MAVEN/apache-maven-3.6.0" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx1024m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fytnNq0HyYlTwuDw4q2neuw7dt" />
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/job/src/main/resources/sql" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\微服务\cloud\job\src\main\resources\sql" />
+      <recent name="E:\微服务\cloud\basic\src\main\java\com\viveye\basic\config" />
+      <recent name="E:\微服务\cloud\job\src\main\resources\i18n" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.viveye.push.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\微服务\cloud\xxl-job-admin\src\main\java\com\viveye" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PushApplication">
+    <configuration name="BasicApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="basic-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.basicapi.BasicApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BasicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="basic" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.basic.BasicApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudServiceApiPomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-service-api-pom" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.cloudserviceapipom.CloudServiceApiPomApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CloudServicePomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="cloud-service-pom" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.cloudservicepom.CloudServicePomApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.common.CommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetawayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="getaway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.getaway.GetawayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PushApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="push" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.push.PushApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XxlJobAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="job" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.viveye.job.XxlJobAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.BasicApplication" />
+      <item itemvalue="Spring Boot.CloudServicePomApplication" />
+      <item itemvalue="Spring Boot.CommonApplication" />
+      <item itemvalue="Spring Boot.GetawayApplication" />
+      <item itemvalue="Spring Boot.PushApplication" />
+      <item itemvalue="Spring Boot.CloudServiceApiPomApplication" />
+      <item itemvalue="Spring Boot.BasicApiApplication" />
+      <item itemvalue="Spring Boot.XxlJobAdminApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.XxlJobAdminApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\vivey\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

@@ -1,0 +1,56 @@
+server:
+  port: 8601
+
+spring:
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  application:
+    name: gateway
+
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+        prefer-ip-address: true
+        healthCheckPath: /actuator/health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+      config:
+        format: yaml
+
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+      routes:
+      - id: basic-route
+        uri: lb://basic
+        predicates:
+        - Path=/basic/**
+
+      - id: push-route
+        uri: lb://push
+        predicates:
+        - Path=/push/**
+
+      - id: job-route
+        uri: lb://job
+        predicates:
+        - Path=/job/**
+
+        filters:
+        - StripPrefix=1
+        - name: RequestRateLimiter
+          arg:
+            redis-rate-limiter.replenishRate: 1
+            redis-rate-limiter.burstCapacity: 3
+            key-resolver: "#{@hostAddrKeyResolver}"
+
+
+

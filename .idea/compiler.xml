@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="push" />
+        <module name="basic-api" />
+        <module name="basic" />
+        <module name="common" />
+        <module name="job" />
+        <module name="getaway" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="basic" options="-parameters" />
+      <module name="basic-api" options="-parameters" />
+      <module name="cloud" options="-parameters" />
+      <module name="cloud-service-api-pom" options="-parameters" />
+      <module name="cloud-service-pom" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="getaway" options="-parameters" />
+      <module name="job" options="-parameters" />
+      <module name="push" options="-parameters" />
+    </option>
+  </component>
+</project>

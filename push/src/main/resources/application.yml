@@ -1,0 +1,53 @@
+server:
+  port: 8603
+
+spring:
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?allowMultiQueries=true&failOverReadOnly=false&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+  application:
+    name: push
+
+  profiles:
+    active: dev
+
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+        prefer-ip-address: true
+        healthCheckPath: /actuator/health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+      config:
+        format: yaml
+
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectionTimeout: 60000
+        readTimeout: 20000
+
+hystrix:
+  command:
+    default:
+      excution:
+        timeout:
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMillseconds: 20000
+

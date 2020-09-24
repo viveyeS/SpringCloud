@@ -1,0 +1,102 @@
+### web
+server:
+  port: 8604
+
+### actuator
+management:
+  context-path: /actuator
+  health:
+    mail:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+### resources
+spring:
+  application:
+    name: job
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}
+        prefer-ip-address: true
+        healthCheckPath: /actuator/health
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+      config:
+        format: yaml
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  mvc:
+    servlet:
+      load-on-startup: 0
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+### freemarker
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+  ### xxl-job, datasource,redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/xxl_job?allowMultiQueries=true&failOverReadOnly=false&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: root
+###spring.datasource.type=org.apache.tomcat.jdbc.pool.DataSource
+    tomcat:
+      max-wait: 10000
+      max-active: 30
+      test-on-borrow: true
+      validation-query: select 1
+      validation-interval: 30000
+### xxl-job, email
+  mail:
+    host: smtp.qq.com
+    port: 25
+    username: xxx@qq.com
+    from: xxx@qq.com
+    password: xxx
+    properties:
+      main:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+### mybatis
+mybatis:
+  mapper-locations: classpath:/mybatis-mapper/*Mapper.xml
+### xxl-job, access token：执行器通讯TOKEN，非空时启用
+xxl:
+  job:
+    accessToken:
+### xxl-job, i18n (default is zh_CN, and you can choose "zh_CN", "zh_TC" and "en")
+    i18n: zh_CN
+## xxl-job, triggerpool max size
+    triggerpool:
+      fast:
+        max: 200
+      slow:
+        max: 100
+### xxl-job log retention days：执行器Log文件定期清理功能，指定日志保存天数，日志文件过期自动删除。限制至少保持3天，否则功能不生效；
+    logretentiondays: 3
